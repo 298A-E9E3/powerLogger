@@ -24,7 +24,6 @@ timeFormat = "%Y-%m-%d %H:%M:%S"
 try:
     while True:
         dumpsysStr = str(subprocess.run(command, capture_output=True, text=True).stdout).split("\n")[1]
-        print(dumpsysStr)
         powerStateStr = re.findall(powerRegex, dumpsysStr)
         currPowerState = False
         try:
